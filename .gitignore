@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+.idea/.idea.CodeBlooded.Build/.idea/
+
+.idea/.idea.CodeBlooded.Build/
