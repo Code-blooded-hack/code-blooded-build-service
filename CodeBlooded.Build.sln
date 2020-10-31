@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlooded.Build.App", "CodeBlooded.Build.App\CodeBlooded.Build.App.csproj", "{F79AEBAA-B85B-486B-A9B1-2DD77BDEF701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlooded.Build.Common", "CodeBlooded.Build.Common\CodeBlooded.Build.Common.csproj", "{D502537C-DCDC-4985-A47A-1F9CD56892C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F79AEBAA-B85B-486B-A9B1-2DD77BDEF701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79AEBAA-B85B-486B-A9B1-2DD77BDEF701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79AEBAA-B85B-486B-A9B1-2DD77BDEF701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79AEBAA-B85B-486B-A9B1-2DD77BDEF701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D502537C-DCDC-4985-A47A-1F9CD56892C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D502537C-DCDC-4985-A47A-1F9CD56892C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D502537C-DCDC-4985-A47A-1F9CD56892C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D502537C-DCDC-4985-A47A-1F9CD56892C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
