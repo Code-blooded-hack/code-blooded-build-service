@@ -8,13 +8,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="EasyNetQ.DI.Microsoft" Version="5.6.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.9" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.9" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.9" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CodeBlooded.Build.Common\CodeBlooded.Build.Common.csproj" />
+      <ProjectReference Include="..\Transport\Transport.csproj" />
     </ItemGroup>
 
     <ItemGroup>

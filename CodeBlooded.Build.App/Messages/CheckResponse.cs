@@ -3,14 +3,11 @@ using Newtonsoft.Json;
 
 namespace CodeBlooded.Build.Messages
 {
-    public class CheckResponseMessage
+    public class CheckResponse
     {
         [JsonProperty("id")]
         public string CheckId { get; set; }
 
-        [JsonProperty("answer")]
-        public IReadOnlyList<string> Answer { get; set; }
-        
         [JsonProperty("running_time")]
         public int ExecutionTime { get; set; }
         
