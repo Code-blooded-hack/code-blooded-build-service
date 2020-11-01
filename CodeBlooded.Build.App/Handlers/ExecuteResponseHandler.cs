@@ -27,17 +27,18 @@ namespace CodeBlooded.Build.App.Handlers
                 {
                     Input = t.Input,
                     Output = t.Output,
-                    Status = t.Status.ToString().ToLowerInvariant()
+                    Status = (!string.Equals(t.Input, t.Output, StringComparison.Ordinal)
+                           ? "WrongAnswer"
+                           : t.Status.ToString()).ToLower()
                 }).ToArray()
             };
 
-            if (routeKey.Equals("reference", StringComparison.OrdinalIgnoreCase))
-            {
-                _codeHealthResponseQueue.Send(response);
-                response = null;
-            }
+            if (!routeKey.Equals("reference", StringComparison.OrdinalIgnoreCase))
+                return new Message<CheckResponse>(response, null);
             
-            return new Message<CheckResponse>(response, null);
+            _codeHealthResponseQueue.Send(response);
+            
+            return new Message<CheckResponse>(null, null);
         }
     }
 }
