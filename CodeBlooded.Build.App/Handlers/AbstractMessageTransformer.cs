@@ -20,7 +20,7 @@ namespace CodeBlooded.Build.App.Handlers
         }
 
 
-        protected abstract Message<TOutputMessage> TransformMessage(TInputMessage message);
+        protected abstract Message<TOutputMessage> TransformMessage(TInputMessage message, string routeKey);
 
         
         private (MessageAction action, bool requeuee) OnMessage(IInputQueue sender, string routingKey, string body)
@@ -32,9 +32,12 @@ namespace CodeBlooded.Build.App.Handlers
                 if (message == null)
                     return (MessageAction.Reject, false);
 
-                var outputMessage = TransformMessage(message);
+                var outputMessage = TransformMessage(message, routingKey);
 
-                _outputQueue.Send(outputMessage.Value, outputMessage.RoutingKey);
+                if (outputMessage.Value == null)
+                    return (MessageAction.Ack, false);
+                
+                _outputQueue.Send(outputMessage.Value, outputMessage.RoutingKey ?? "");
                 
                 return (MessageAction.Ack, false);
             }

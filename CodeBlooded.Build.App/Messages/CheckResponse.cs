@@ -1,20 +1,17 @@
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
-namespace CodeBlooded.Build.Messages
+namespace CodeBlooded.Build.App.Messages
 {
     public class CheckResponse
     {
+        [JsonPropertyName("id")]
         [JsonProperty("id")]
-        public string CheckId { get; set; }
-
-        [JsonProperty("running_time")]
-        public int ExecutionTime { get; set; }
+        public int Id { get; set; }
         
-        [JsonProperty("memory_use")]
-        public int MemoryUsage { get; set; }
-        
-        [JsonProperty("tests")]
-        public IReadOnlyList<string> Results { get; set; }
+        [JsonPropertyName("results")]
+        [JsonProperty("results")]
+        public IReadOnlyList<TestResultResponse> Results { get; set; }
     }
 }
